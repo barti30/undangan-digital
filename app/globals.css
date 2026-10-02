@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Sembunyikan scroll saat opening screen aktif */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
