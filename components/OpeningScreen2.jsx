@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function OpeningScreen({ onOpen }) {
+export default function OpeningScreen2({ onOpen }) {
   const audioRef = useRef(null);
   const searchParams = useSearchParams();
   const [guestName, setGuestName] = useState("Tamu Undangan");
@@ -34,7 +34,7 @@ export default function OpeningScreen({ onOpen }) {
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-between bg-[#f3edf4] bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] h-[100dvh] w-full px-6 py-10 overflow-hidden text-[#5c4a42] font-sans">
       
-      {/* Audio Opening */}
+      {/* Audio Opening Versi 2 */}
       <audio 
         ref={audioRef} 
         src="" 
@@ -59,16 +59,16 @@ export default function OpeningScreen({ onOpen }) {
         </h1>
       </div>
 
-      {/* --- BAGIAN TENGAH: TANGGAL ACARA --- */}
+      {/* --- BAGIAN TENGAH: TANGGAL ACARA (31 OKTOBER 2026) --- */}
       <div className="flex items-center justify-center gap-4 z-10 my-auto text-[#5c4a42]">
-        <span className="text-xs font-medium uppercase tracking-widest text-[#8c7870]">Minggu</span>
+        <span className="text-xs font-medium uppercase tracking-widest text-[#8c7870]">Sabtu</span>
         <div className="h-10 w-[1px] bg-[#b0988c]/60"></div>
         <div className="text-center px-1">
-          <span className="text-3xl font-serif font-bold tracking-tight block text-[#7a5c52]">01</span>
+          <span className="text-3xl font-serif font-bold tracking-tight block text-[#7a5c52]">31</span>
           <span className="text-[10px] uppercase tracking-wider text-[#8c7870] block">2026</span>
         </div>
         <div className="h-10 w-[1px] bg-[#b0988c]/60"></div>
-        <span className="text-xs font-medium uppercase tracking-widest text-[#8c7870]">November</span>
+        <span className="text-xs font-medium uppercase tracking-widest text-[#8c7870]">Oktober</span>
       </div>
 
       {/* --- BAGIAN BAWAH: KEPADA & NAMA TAMU OTOMATIS --- */}

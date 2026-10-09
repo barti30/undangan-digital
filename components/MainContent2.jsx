@@ -70,7 +70,7 @@ export default function WeddingInvitation() {
   }, []);
 
   useEffect(() => {
-    const targetDate = new Date('November 1, 2026 10:00:00').getTime();
+    const targetDate = new Date('October 31, 2026 09:00:00').getTime();
     const interval = setInterval(() => {
       const distance = targetDate - new Date().getTime();
       if (distance < 0) clearInterval(interval);
@@ -142,7 +142,7 @@ export default function WeddingInvitation() {
     setNama(''); setUcapan(''); setKehadiran('Hadir');
   };
 
-  const calendarUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Disa+%26+Iqbal&dates=20261101T030000Z/20261101T080000Z&location=Kav.+Bale+Bumi+Asri,+Jl.+Nusa,+Rancamanyar,+Baleendah,+Kabupaten+Bandung';
+  const calendarUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Disa+%26+Iqbal&dates=20261031T020000Z/20261031T100000Z&location=Kp.+Cikupa,+Bojongmalaka,+Kec.+Baleendah,+Kabupaten+Bandung';
 
   return (
     <div
@@ -184,24 +184,18 @@ export default function WeddingInvitation() {
 
       {/* ================= HERO ================= */}
       <section className="relative min-h-[100svh] overflow-hidden bg-gradient-to-br from-[#bcd3ea] via-[#eef3f8] to-[#fbf7f0] flex flex-col">
-
-        {/* Latar HP: foto penuh satu layar (tajam) + lapisan terang tipis supaya teks terbaca */}
         <img src="/images/couple-2.jpg" alt="" className="md:hidden absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none" />
         <div className="md:hidden absolute inset-0 bg-gradient-to-b from-white/25 via-white/10 to-[#fbf7f0]/50 pointer-events-none" />
 
-        {/* Latar desktop: foto kiri & kanan (tajam) */}
         <img src="/images/couple-2.jpg" alt="" className="hidden md:block absolute -left-20 top-0 h-full w-1/2 object-cover opacity-50 pointer-events-none"
           style={{ maskImage: 'linear-gradient(to right, black 30%, transparent)', WebkitMaskImage: 'linear-gradient(to right, black 30%, transparent)' }} />
         <img src="/images/couple-2.jpg" alt="" className="hidden md:block absolute -right-24 top-0 h-full w-1/3 object-cover opacity-25 pointer-events-none"
           style={{ maskImage: 'linear-gradient(to left, black 20%, transparent)', WebkitMaskImage: 'linear-gradient(to left, black 20%, transparent)' }} />
 
-        {/* Lingkaran navy di pojok kiri bawah */}
         <div className="absolute -bottom-20 -left-20 w-64 h-64 md:-bottom-24 md:-left-24 md:w-72 md:h-72 rounded-full bg-[#1f3556] opacity-90 pointer-events-none" />
         <div className="absolute -bottom-20 -left-20 w-64 h-64 md:-bottom-24 md:-left-24 md:w-72 md:h-72 rounded-full border-2 border-[#c9a96a]/70 scale-110 pointer-events-none" />
 
         <div className="relative z-10 w-full max-w-6xl mx-auto flex-1 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-4 pt-12 pb-6 md:pt-10 md:pb-24">
-
-          {/* Kolase polaroid */}
           <div className="relative w-[min(340px,88vw)] aspect-[340/540] md:w-[460px] md:aspect-[460/620] shrink-0">
             <div className="absolute top-0 left-0 w-[52%] z-10">
               <FadeInSection delay={200}>
@@ -227,17 +221,8 @@ export default function WeddingInvitation() {
                 </div>
               </FadeInSection>
             </div>
-            <div className="absolute bottom-0 left-0 z-40 w-14 md:w-16 bg-white p-1 shadow-lg" style={{ transform: 'rotate(-8deg)' }}>
-              <img src="/images/couple-2.jpg" alt="" className="w-full h-12 md:h-14 object-cover sepia-[.5]" />
-              <p className="text-[6px] text-center tracking-widest text-slate-500 font-semibold mt-0.5">PRAMBANAN</p>
-            </div>
-            <div className="absolute -bottom-2 right-0 z-40 w-24 bg-[#f1e9d8] p-2 shadow-lg text-center" style={{ transform: 'rotate(7deg)', clipPath: 'polygon(0 4%, 6% 0, 100% 2%, 98% 96%, 90% 100%, 0 97%)' }}>
-              <p className="text-sm font-handwriting text-slate-500 leading-tight">Bersama menuju halal selamanya</p>
-              <span className="text-xs text-slate-400">♡</span>
-            </div>
           </div>
 
-          {/* Teks undangan */}
           <div className="w-full max-w-sm px-2 text-center md:text-left flex flex-col items-center md:items-start">
             <FadeInSection delay={1000}>
               <p className="text-[10px] tracking-[0.35em] font-semibold text-[#55697a] uppercase mb-3">The Wedding of</p>
@@ -258,14 +243,14 @@ export default function WeddingInvitation() {
               <div className="w-full space-y-5 text-left mb-7 mx-auto max-w-[19rem] md:max-w-none">
                 <div className="flex items-start gap-3">
                   <CalendarIcon className="w-6 h-6 shrink-0 text-[#2f5385] mt-0.5" />
-                  <p className="text-sm text-slate-700 leading-snug">Minggu,<br /><b>1 November 2026</b></p>
+                  <p className="text-sm text-slate-700 leading-snug">Sabtu,<br /><b>31 Oktober 2026</b></p>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg className="w-6 h-6 shrink-0 text-[#2f5385] mt-0.5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z" /><circle cx="12" cy="10" r="2.5" /></svg>
                   <div className="min-w-0 text-sm text-slate-700 leading-snug break-words">
-                    <p className="font-bold">Kav. Bale Bumi Asri</p>
-                    <p>Jl. Nusa, Rancamanyar</p>
-                    <p className="text-[12px] text-slate-500">Kec. Baleendah, Kabupaten Bandung, Jawa Barat 40375</p>
+                    <p className="font-bold">Rancanumpang </p>
+                    <p>Kelurahan Rancanumpang</p>
+                    <p className="text-[12px] text-slate-500"> RT 003 RW 001 Kecamatan Gedebage Kota Bandung 40613</p>
                   </div>
                 </div>
               </div>
@@ -277,17 +262,8 @@ export default function WeddingInvitation() {
           </div>
         </div>
 
-        {/* Ruang kosong di HP supaya lingkaran + kutipan tidak menimpa tombol */}
         <div className="md:hidden h-40" />
-
-        {/* Kutipan: di dalam lingkaran navy (HP & desktop) */}
         <p className="absolute bottom-4 left-4 md:bottom-6 md:left-5 z-20 max-w-[8.5rem] text-white/90 text-xs md:text-[13px] font-handwriting leading-tight pointer-events-none">{QUOTE}</p>
-
-        {/* Scroll hint (desktop) */}
-        <div className="hidden md:flex absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex-col items-center gap-2 text-[10px] text-slate-600 font-body">
-          <div className="w-5 h-8 border-2 border-[#2f5385]/60 rounded-full flex justify-center pt-1.5"><span className="w-1 h-2 bg-[#2f5385] rounded-full animate-bounce" /></div>
-          Scroll untuk melihat lebih lanjut
-        </div>
       </section>
 
       {/* ================= KONTEN LAINNYA ================= */}
@@ -394,29 +370,34 @@ export default function WeddingInvitation() {
               ))}
             </div>
             <div className="flex justify-center items-center gap-6 mb-10 text-[#627a8e]">
-              <div className="text-center"><p className="text-[10px] uppercase font-semibold">Sat</p><p className="text-xl opacity-50">31</p></div>
+              <div className="text-center"><p className="text-[10px] uppercase font-semibold">Fri</p><p className="text-xl opacity-50">30</p></div>
               <div className="text-center relative hover:scale-110 transition-transform duration-300">
-                <p className="text-[10px] uppercase text-pink-400 font-bold mb-1">Sun</p>
-                <div className="w-14 h-14 mx-auto flex items-center justify-center border-2 border-pink-300 rounded-[50%_50%_50%_50%/60%_60%_40%_40%] rotate-45 bg-pink-50 shadow-sm"><span className="text-3xl font-bold text-pink-400 -rotate-45 block">1</span></div>
+                <p className="text-[10px] uppercase text-pink-400 font-bold mb-1">Sat</p>
+                <div className="w-14 h-14 mx-auto flex items-center justify-center border-2 border-pink-300 rounded-[50%_50%_50%_50%/60%_60%_40%_40%] rotate-45 bg-pink-50 shadow-sm"><span className="text-3xl font-bold text-pink-400 -rotate-45 block">31</span></div>
                 <p className="text-[9px] text-pink-500 mt-2 font-bold bg-pink-100 px-2 py-0.5 rounded-full inline-block">D-day !!</p>
               </div>
-              <div className="text-center"><p className="text-[10px] uppercase font-semibold">Mon</p><p className="text-xl opacity-50">2</p></div>
+              <div className="text-center"><p className="text-[10px] uppercase font-semibold">Sun</p><p className="text-xl opacity-50">1</p></div>
             </div>
           </FadeInSection>
           <FadeInSection delay={200}>
-            <div className="space-y-6 text-sm text-[#627a8e]">
-              <div><h4 className="text-2xl font-handwriting text-pink-400 mb-1">Akad Nikah</h4><p className="text-sm font-bold text-slate-700 mb-0.5">Minggu, 1 November 2026</p><p className="text-xs font-semibold text-slate-500">Pukul 10.00 WIB</p></div>
-              <div className="flex items-center justify-center opacity-60 py-2"><svg width="150" height="20" viewBox="0 0 150 20" fill="none" stroke="#9eb5c7" strokeWidth="1.5"><path d="M0 10 Q 37.5 10, 50 10 T 65 10 Q 70 0, 75 10 Q 80 20, 85 10 Q 90 10, 100 10 T 150 10" /><path d="M72 10 L78 10 M75 7 L75 13" stroke="#f4aab9" strokeWidth="2.5" /></svg></div>
-              <div><h4 className="text-2xl font-handwriting text-pink-400 mb-1">Resepsi</h4><p className="text-sm font-bold text-slate-700 mb-0.5">Minggu, 1 November 2026</p><p className="text-xs font-semibold text-slate-500">Pukul 12.00 WIB - Selesai</p></div>
-              <div className="pt-2 text-xs text-slate-500 leading-relaxed">
-                <p className="font-bold text-slate-700 text-sm">Kav. Bale Bumi Asri</p>
-                <p>Jl. Nusa, Rancamanyar, Kec. Baleendah,<br />Kabupaten Bandung, Jawa Barat 40375</p>
+            <div className="space-y-8 text-sm text-[#627a8e]">
+              
+              <div className="flex items-center justify-center opacity-60 py-1"><svg width="150" height="20" viewBox="0 0 150 20" fill="none" stroke="#9eb5c7" strokeWidth="1.5"><path d="M0 10 Q 37.5 10, 50 10 T 65 10 Q 70 0, 75 10 Q 80 20, 85 10 Q 90 10, 100 10 T 150 10" /><path d="M72 10 L78 10 M75 7 L75 13" stroke="#f4aab9" strokeWidth="2.5" /></svg></div>
+              <div>
+                <h4 className="text-2xl font-handwriting text-pink-400 mb-1">Resepsi</h4>
+                <p className="text-sm font-bold text-slate-700 mb-0.5">Sabtu, 31 Oktober 2026</p>
+                <p className="text-xs font-semibold text-slate-500">Pukul 10.00 WIB - selesai</p>
+              </div>
+              
+              <div className="pt-2 text-xs text-slate-500 leading-relaxed border-t border-slate-200/60 max-w-xs mx-auto">
+                <p className="font-bold text-slate-700 text-sm">Kp. Rancanumpang</p>
+                <p>RT 003 RW 001 Kelurahan Rancanumpang Kecamatan Gedebage Kota Bandung 40613</p>
               </div>
             </div>
           </FadeInSection>
           <FadeInSection delay={400}>
-            <div className="mt-10">
-              <a href="https://maps.app.goo.gl/FqDqY1aiXUAAeEPq8?g_st=aw" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="inline-flex items-center justify-center gap-2 border-2 border-[#9dbad5] text-[#55697a] px-8 py-3 rounded-full text-xs font-bold hover:bg-[#9dbad5] hover:text-white hover:border-[#9dbad5] transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
+            <div className="mt-8">
+              <a href="https://maps.app.goo.gl/W7f2YfqvprXWAqpW9?g_st=iw" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="inline-flex items-center justify-center gap-2 border-2 border-[#9dbad5] text-[#55697a] px-8 py-3 rounded-full text-xs font-bold hover:bg-[#9dbad5] hover:text-white hover:border-[#9dbad5] transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>Lihat Lokasi di Maps
               </a>
             </div>
