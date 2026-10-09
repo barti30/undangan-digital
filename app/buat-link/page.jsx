@@ -24,8 +24,7 @@ export default function LinkGeneratorPage() {
     setGeneratedLink(link);
     setCopied(false);
 
-    // Langsung buka link di tab baru tanpa perlu disalin
-    window.open(link, "_blank", "noopener,noreferrer");
+    // Perintah window.open dihapus agar link hanya muncul di bawah (tidak langsung buka tab baru)
   };
 
   const handleCopy = () => {
@@ -69,7 +68,7 @@ export default function LinkGeneratorPage() {
               onChange={(e) => setInvitationVersion(e.target.value)}
               className="w-full px-4 py-3 bg-white border border-[#e5dcda] rounded-xl text-xs text-[#5c4a42] focus:outline-none focus:border-[#a89387]"
             >
-              <option value="1">Tempat Pengantin perempuan Tanggal 1 november 2026</option>
+              <option value="1">Tempat Pengantin perempuan Tanggal 1 November 2026</option>
               <option value="2">Tempat Pengantin laki-laki Tanggal 31 Oktober 2026</option>
             </select>
           </div>
@@ -78,7 +77,7 @@ export default function LinkGeneratorPage() {
             type="submit"
             className="w-full bg-[#a89387] text-white py-3 rounded-xl font-medium text-xs uppercase tracking-[0.15em] shadow-md hover:bg-[#947d71] transition-all"
           >
-            Generate & Buka Link
+            Generate Link
           </button>
         </form>
 

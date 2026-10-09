@@ -1367,6 +1367,10 @@ video {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.px-2\.5{
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1422,10 +1426,6 @@ video {
 .py-3\.5{
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
-}
-.px-2\.5{
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
 }
 .pb-10{
   padding-bottom: 2.5rem;
@@ -1980,19 +1980,14 @@ body {
     line-height: 1.25rem;
   }
 
-  .sm\:text-xs{
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
   .sm\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 
-  .sm\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .sm\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 @media (min-width: 768px){
